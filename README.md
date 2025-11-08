@@ -52,13 +52,6 @@ Após o login, o usuário recebe um **access token** e um **refresh token**, que
 | `PUT` | `/api/v1/movies/{id}/` | Atualiza informações do filme |
 | `DELETE` | `/api/v1/movies/{id}/` | Exclui um filme |
 
-### 🌟 Avaliações
-| Método | Endpoint | Descrição |
-|--------|-----------|-----------|
-| `GET` | `/api//v1reviews/` | Lista todas as avaliações |
-| `POST` | `/api/v1/reviews/` | Cria uma nova avaliação (necessita autenticação) |
-| `GET` | `/api/v1/reviews/{id}/` | Detalha uma avaliação específica |
-
 ### 👤 Atores
 | Método | Endpoint | Descrição |
 |--------|-----------|-----------|
@@ -77,6 +70,13 @@ Após o login, o usuário recebe um **access token** e um **refresh token**, que
 | `PUT` | `/api/v1/genres/{id}/` | Atualiza informações do gênero |
 | `DELETE` | `/api/v1/genres/{id}/` | Exclui um gênero |
 
+### 🌟 Avaliações
+| Método | Endpoint | Descrição |
+|--------|-----------|-----------|
+| `GET` | `/api//v1reviews/` | Lista todas as avaliações |
+| `POST` | `/api/v1/reviews/` | Cria uma nova avaliação (necessita autenticação) |
+| `GET` | `/api/v1/reviews/{id}/` | Detalha uma avaliação específica |
+
 ---
 
 ## ⚙️ Instalação e Configuração
@@ -85,3 +85,16 @@ Após o login, o usuário recebe um **access token** e um **refresh token**, que
 ```bash
 git clone https://github.com/Francelmo87/movieverse-api.git
 cd movieverse-api
+# Crie sua venv
+python -m venv .venv
+# Ative sua venv(o comando é de acordo com seu S.O)     
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+# Instale as dependências
+pip install -r requirements.txt
+# Faça as Migrações para o banco de Dados  
+python manage.py migrate          
+# Crie seu super usuário
+python manage.py createsuperuser
+# rode em sua máquina (acesse ao seu navegador)
+python manage.py runserver
