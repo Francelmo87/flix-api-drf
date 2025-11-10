@@ -83,7 +83,7 @@ Após o login, o usuário recebe um **access token** e um **refresh token**, que
 
 ### 🔧 1. Clone o repositório
 ```bash
-git clone https://github.com/Francelmo87/movieverse-api.git
+git clone https://github.com/Francelmo87/flix-api-drf.git
 cd movieverse-api
 # Crie sua venv
 python -m venv .venv
